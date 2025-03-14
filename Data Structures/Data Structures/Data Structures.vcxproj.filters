@@ -22,12 +22,18 @@
     <Filter Include="Header Files\Menu Program">
       <UniqueIdentifier>{5db48128-a97a-45b5-8cb8-a5f0f0b75d27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{ceecbe75-a903-4969-95d3-da4d8499a4f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Scripts\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,8 +53,11 @@
     <ClInclude Include="Headers\Node.h">
       <Filter>Header Files\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Stack.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
     <ClInclude Include="Headers\Menu.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Menu Program</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

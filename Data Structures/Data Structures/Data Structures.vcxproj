@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scripts\Menu.cpp" />
+    <ClCompile Include="Scripts\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\DataStructures.h" />
@@ -29,6 +30,7 @@
     <ClInclude Include="Headers\Menu.h" />
     <ClInclude Include="Headers\Node.h" />
     <ClInclude Include="Headers\Singly_linkedList.h" />
+    <ClInclude Include="Headers\Stack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

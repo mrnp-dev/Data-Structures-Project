@@ -1,4 +1,3 @@
 ﻿  Main.cpp
-  Menu.cpp
-  Generating Code...
-  Data Structures.vcxproj -> C:\Users\NiÑo\source\repos\Data Structures\x64\Debug\Data Structures.exe
+C:\GitHub Projects\DS-repo\Data Structures\Data Structures\Headers\linkedList.h(96,1): warning C4715: 'linkedList<int>::getAt': not all control paths return a value
+  Data Structures.vcxproj -> C:\GitHub Projects\DS-repo\Data Structures\x64\Debug\Data Structures.exe

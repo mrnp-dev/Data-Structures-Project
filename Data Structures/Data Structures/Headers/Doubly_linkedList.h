@@ -14,6 +14,9 @@ public:
 	void deleteHead();
 	void deleteTail();
 	void deleteAt(int);
+	//Sorting
+	void selectionSort(string);
+	void revSelSort();
 };
 
 
@@ -36,6 +39,7 @@ void Doubly<type>::insertHead(type data)
 	}
 
 	newNode->next = this->head;
+	this->head->before = newNode;
 	this->head = newNode;
 	this->size++;
 }
@@ -209,5 +213,43 @@ void Doubly<type>::deleteAt(int pos)
 		temp = nullptr;
 		this->size--;
 		//1 2 3 4
+	}
+}
+
+//---------------------Sorting---------------------
+
+template <class type>
+void Doubly<type>::selectionSort(string method)
+{
+	if (method == "reverse")
+		revSelSort();
+}
+
+template <class type>
+void Doubly<type>::revSelSort()
+{
+	node<type>* temp = this->head;
+	node<type>* smallest;
+	while (temp != nullptr)
+	{
+		// FIND THE SMALLEST DATA BY ITERATING THROUGH THE WHOLE LIST
+		node<type>* temp2 = temp->next;
+		smallest = temp;
+		while (temp2 != nullptr)
+		{
+			if (smallest->data > temp2->data)
+			{
+				smallest = temp2;
+			}
+			temp2 = temp2->next;
+		}
+
+		// SWAP THE SMALLEST DATA WITH THE CURRENT NODE
+		if (smallest != temp)
+		{
+			// Swap the data instead of the nodes to simplify the process
+			std::swap(temp->data, smallest->data);
+		}
+		temp = temp->next;
 	}
 }

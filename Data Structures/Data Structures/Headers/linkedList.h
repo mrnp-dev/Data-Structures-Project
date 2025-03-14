@@ -1,6 +1,7 @@
 #pragma once
 #include "Node.h"
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 
 template <class type>
@@ -23,6 +24,7 @@ public:
 	virtual void deleteTail() = 0;
 	virtual void deleteAt(int);
 	//Utilities
+	virtual type getAt(int);
 	virtual int getSize();
 	virtual void display();
 };
@@ -75,6 +77,23 @@ int linkedList<type>::getSize()
 
 //---------------------Insertion---------------------
 
+template <class type>
+type linkedList<type>::getAt(int index)
+{
+	if (!isEmpty() && (index < size && index > -1))
+	{
+		node<type>* temp = head;
+		int ind = 0;
+		while (temp != nullptr)
+		{
+			if (ind++ == index)
+				return temp->data;
+			temp = temp->next;
+		}
+	}
+	else
+		throw out_of_range("Index out of Range");
+}
 
 template <class type>
 void linkedList<type>::insertAt(int pos,type data) 
